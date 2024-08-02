@@ -4,6 +4,7 @@ function switchStyle(style){
 
 const menuButton = document.querySelector('.menu');
 const screenMenu= document.querySelector('.screen-menu');
+const medalTableCont = document.getElementById('medalTableCont');
 
 menuButton.addEventListener('click', () =>{
     menuButton.classList.toggle('active');
@@ -16,7 +17,7 @@ function toggleMenu()
     screenMenu.classList.toggle('active');
 }
 
-const medalRanking = [
+const medalData= [
 
     {rank: 1, country:"People's Republic of China", Gold: 13, Silver: 8, Bronze: 9},
     {rank: 2, country: "France", Gold:11, Silver: 12 ,Bronze: 13},
@@ -36,9 +37,9 @@ function createMedalTable(data){
     const tbody = document.createElement('tbody');
 
     const headerRow = document.createElement('tr');
-    const header = ['Rank', 'Name of country', 'Gold Medals', 'Silver Medals', 'Bronze Medals', 'Total Medals'];
+    const headers = ['Rank', 'Name of country', 'Gold Medals', 'Silver Medals', 'Bronze Medals', 'Total Medals'];
 
-    headereaders.forEach(headerText => {
+    headers.forEach(headerText => {
         const th = document.createElement('th');
         th.textContent = headerText;
         headerRow.appendChild(th);
