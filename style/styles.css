@@ -97,9 +97,47 @@ h1,h2 {
     text-align: center;
 }
 
-# home{
+#home{
+    background-color: rgb(107, 12, 116);
+    color: whitesmoke ;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+
+}
+
+#home h1{
+    font-size: 4em;
+    font-weight: bold;
+    font-family:'Arial ', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
     
 }
+
+#medalRanking h1{
+    color: whitesmoke ;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+
+}
+
+#medalRanking h1{
+    font-size: 4em;
+    font-weight: bold;
+    font-family:'Arial ', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    
+}
+
 table{
     width: 100%;
     border-collapse: collapse;
@@ -121,6 +159,40 @@ th{
 td{
     background-color: rosybrown;
 }
+
+#sportSchedule{
+    color: whitesmoke ;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+
+}
+#sportSchedule h2{
+    font-size: 4em;
+    font-weight: bold;
+    font-family:'Arial ', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+}
+#sportSchedule p{
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    font-family:'Arial ', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: bisque;
+}
 .calendar{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -129,8 +201,7 @@ td{
 }
 
 .day, .date {
-    background-color: burlywood;
-    border: 1px solid #ccc;
+    
     padding: 10px;
     text-align: center;
    
@@ -138,30 +209,56 @@ td{
 
 .day{
     font-weight: bold;
-    background-color: #ddd;
+    background-color:lightcoral;
 }
 
 .date{
-    background-color: #fff;
+   
+    background-color: darkcyan;
     cursor: pointer;
 }
 
 .sports-list{
     display: none;
     position:absolute;
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color:salmon;
+    border: 1px solid ;
     padding: 10px;
     z-index: 1000;
 }
 .date:hover .sports-list{
     display: block;
-    background-color: #e0e0e0;
+    background-color: sandybrown; 
 
 }
 
 #news{
     padding: 20px;
+    background-color:rgb(107, 12, 116) ;
+}
+#news h2{
+    color: whitesmoke;
+    font-size: 4em;
+    font-weight: bold;
+    font-family:'Arial ', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#new .news-item a{
+    color: black;
+    text-decoration: none;
+}
+#news .news-item a:hover{
+    text-decoration:underline;
+}
+
+#news img{
+    max-width: 100%;
+    height: auto;
 }
 .news-item{
     display: flex;
@@ -184,6 +281,9 @@ td{
 .news-item p { 
     font-size: 1.2em;
     margin: 10px 0;
+    color: black ;
+    font-weight: bold;
+
 }
 
 .news-item{
