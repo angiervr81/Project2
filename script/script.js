@@ -119,30 +119,30 @@ function createCalendar(){
         calendarCont.appendChild(dayDiv);
     });
 
+    for(let i=0; i<2; i++){
+        const emptyDiv= document.createElement('div');
+        emptyDiv.classList.add('empty');
+        calendarCont.appendChild(emptyDiv);
+    }
+
     dates.forEach(date => {
         const dateDiv =document.createElement('div');
         dateDiv.classList.add('date');
         dateDiv.textContent = date;
-        calendarCont.appendChild(dateDiv);
 
-    });
-
-    function displaySports(date)
-    {
         const sportsList = document.createElement('ul');
-        sportsList.innerHTML= '';
-        const sports = sportsSchedule[date] || [];
+        sportsList.classList.add('sports-list');
+        const sports = sportSchedule[date] || [];
         sports.forEach(sport => {
             const sportItem = document.createElement('li');
             sportItem.textContent = sport;
             sportsList.appendChild(sportItem);
         });
-        const sportScheduleSelect = document.getElementById('sportSchedule');
-        const listexisting = sportScheduleSelect.querySelector('ul');
-        if(listexisting){
-            sportScheduleSelect.removeChild(listexisting);
-        }
-        sportScheduleSelect.appendChild(sportsList);
-    }
-}
+            dateDiv.appendChild(sportsList);
+            calendarCont.appendChild(dateDiv);
+    });
+};
+
+document.addEventListener('DOMContentLoaded',()=>{
     createCalendar();
+})

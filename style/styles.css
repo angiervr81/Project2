@@ -118,11 +118,12 @@ th,td {
     margin-top: 20px;
 }
 
-.day,.date{
-    background-color: #f0f0f0;
+.day, .date {
+    background-color: burlywood;
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+   
 }
 
 .day{
@@ -132,21 +133,51 @@ th,td {
 
 .date{
     background-color: #fff;
+    cursor: pointer;
 }
 
-.date:hover{
-    background-color: #e0e0e0;
-}
-
-#sportSchedule{
-    margin-top: 20px;
-    list-style-type: none;
-    padding: 0;
-}
-
-#sportSchedule ul li{
-    padding:5px;
-    background-color: #f9f9f9;
+.sports-list{
+    display: none;
+    position:absolute;
+    background-color: white;
     border: 1px solid #ddd;
-    margin-bottom: 5px;
+    padding: 10px;
+    z-index: 1000;
 }
+.date:hover .sports-list{
+    display: block;
+    background-color: #e0e0e0;
+
+}
+
+#news{
+    padding: 20px;
+}
+.news-item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.news-item div {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+.news-item img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    object-fit: cover;
+}
+
+.news-item p { 
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.news-item{
+    text-decoration: none;
+    color: inherit;
+}
+
