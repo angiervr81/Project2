@@ -111,3 +111,42 @@ th,td {
     text-align: left;
 }
 
+.calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.day,.date{
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.day{
+    font-weight: bold;
+    background-color: #ddd;
+}
+
+.date{
+    background-color: #fff;
+}
+
+.date:hover{
+    background-color: #e0e0e0;
+}
+
+#sportSchedule{
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#sportSchedule ul li{
+    padding:5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}

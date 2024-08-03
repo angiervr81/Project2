@@ -87,3 +87,62 @@ function createMedalTable(data){
 
 const medalTable = createMedalTable(medalData);
 medalTableCont.appendChild(medalTable);
+
+
+function createCalendar(){
+    const calendarCont = document.querySelector('.calendar');
+    const days = ['M', 'T', 'W', 'Th', 'F', 'Sat', 'Sun'];
+    const dates =[
+        '24 JUL','25 JUL','26 JUL','27 JUL','28 JUL','29 JUL','30 JUL',
+        '31 JUL','1 AUG','2 AUG','3 AUG','4 AUG','5 AUG','6 AUG','7 AUG', '8 AUG',
+        '9 AUG','10 AUG','11 AUG'
+
+    ];
+
+    const sportSchedule ={
+        '24 JUL':['Football','Rugby'],
+        '25 JUL':['Football', 'Hanball','Rugby'],
+        '26 JUL':['Open Ceremony'],
+        '27 JUL':['Fencing','Hockey','Judo','Rowing', 'Volleyball'],
+        '28 JUL':['Archey','Fencing','Handball','Rowing','Swimming', 'Beach Volleyball'],
+        '29 JUL':['Hockey','Fencing','Handball','Judo','Water Polo'],
+        '30 JUL':['Basketball','Tennis','Rowing','Swimming', 'Volleyball'],
+        '31 JUL':['Basketball','Football','Hockey','Swimming', 'Triathlon'],
+        '1 AUG':['Golf','Football','Hockey','Rowing','Swimming', 'Water Polo'],
+        '2 AUG':['Beach Volleyball','Football','handball','Rowing','Swimming'],
+    };
+
+    days.forEach(day => {
+        const dayDiv = document.createElement('div');
+        dayDiv.classList.add('day');
+        dayDiv.textContent = day;
+        calendarCont.appendChild(dayDiv);
+    });
+
+    dates.forEach(date => {
+        const dateDiv =document.createElement('div');
+        dateDiv.classList.add('date');
+        dateDiv.textContent = date;
+        calendarCont.appendChild(dateDiv);
+
+    });
+
+    function displaySports(date)
+    {
+        const sportsList = document.createElement('ul');
+        sportsList.innerHTML= '';
+        const sports = sportsSchedule[date] || [];
+        sports.forEach(sport => {
+            const sportItem = document.createElement('li');
+            sportItem.textContent = sport;
+            sportsList.appendChild(sportItem);
+        });
+        const sportScheduleSelect = document.getElementById('sportSchedule');
+        const listexisting = sportScheduleSelect.querySelector('ul');
+        if(listexisting){
+            sportScheduleSelect.removeChild(listexisting);
+        }
+        sportScheduleSelect.appendChild(sportsList);
+    }
+}
+    createCalendar();
