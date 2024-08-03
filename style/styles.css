@@ -96,6 +96,10 @@ footer{
 h1,h2 {
     text-align: center;
 }
+
+# home{
+    
+}
 table{
     width: 100%;
     border-collapse: collapse;
@@ -109,8 +113,14 @@ table, th, td{
 th,td {
     padding: 8px;
     text-align: left;
+    font-weight: bold
 }
-
+th{
+    background-color: lightgrey;
+}
+td{
+    background-color: rosybrown;
+}
 .calendar{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
